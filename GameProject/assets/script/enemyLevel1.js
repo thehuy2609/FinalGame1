@@ -25,12 +25,14 @@ cc.Class({
         this._firstPositionYWave = this.node.parent.height/2 + 50;
     },
 
-    createEnemy(xCreate, yCreate, toX, toY, prefabEnemy){
+    createEnemy(xCreate, yCreate, toX, toY, prefabEnemy, wave, delayMove){
         let enemyWave1 = cc.instantiate(prefabEnemy);
             enemyWave1.setPosition(xCreate, yCreate);
             enemyWave1.parent = this.node;
             enemyWave1.getComponent('enemy').toX = toX;
             enemyWave1.getComponent('enemy').toY = toY;
+            enemyWave1.getComponent('enemy').wave = wave;
+            enemyWave1.getComponent('enemy').delayMove = delayMove;
     },
 
     createWave1(){
@@ -42,7 +44,7 @@ cc.Class({
         let positionYWave1 = this._toYEnemyWave1; // vị trí Y đến
         
         for (let i = 1; i <= 12; i++) {
-            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave1, positionYWave1, prefabEnemyWave1);
+            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave1, positionYWave1, prefabEnemyWave1, 1, 0);
             if(i === 6){
                 positionXWave1 = this._toXEnemyWave1 + prefabEnemyWave1.data.width;
                 positionYWave1 -= prefabEnemyWave1.data.height;
@@ -64,7 +66,7 @@ cc.Class({
         let positionYWave2 = this._toYEnemyWave2;
 
         for (let i = 1; i <= 15; i++) {
-            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave2, positionYWave2, prefabEnemyWave2);
+            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave2, positionYWave2, prefabEnemyWave2, 2, 0);
             
             if(i === 5){
                 positionXWave2 = this._toXEnemyWave2 + prefabEnemyWave2.data.width*1/2;
@@ -93,7 +95,7 @@ cc.Class({
         let positionYWave3 = this._toYEnemyWave3;
 
         for (let i = 1; i <= 30; i++) {
-            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave3, positionYWave3, prefabEnemyWave3);
+            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave3, positionYWave3, prefabEnemyWave3, 3, 0);
             
             if(i % 10 ==0){
                 positionXWave3 = -this.prefabShip.data.width * 4.5;

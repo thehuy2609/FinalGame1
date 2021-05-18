@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 1,
+    "_level": 3,
     "_components": [
       {
         "__id__": 2
@@ -118,10 +118,12 @@
     "_timerShoot": 0,
     "_countdownShoot": 0,
     "_speed": 1,
+    "level": 1,
     "_canShoot": false,
     "prefabBullet": {
       "__uuid__": "1af1e8ec-3406-4035-b56f-e2952193e94d"
     },
+    "nodeMainGame": null,
     "_id": ""
   },
   {
@@ -130,9 +132,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "d3bf7470-334a-4d33-815a-abc6e767ec75"
+      "__id__": 0
     },
-    "fileId": "42do2OLWBJhZ72CVZd7YPx",
+    "fileId": "02BAvI8FREJqzl7NVpAjCx",
     "sync": false
   }
 ]

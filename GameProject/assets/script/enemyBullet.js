@@ -3,8 +3,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        toX: 0,
-        toY: 0,
+        bulletToX: 0,
+        bulletToY: 0,
         speed: 1,
         _canDestroy: false,
     },
@@ -15,12 +15,12 @@ cc.Class({
 
     start () {
         cc.tween(this.node)
-            .to(this.speed, {x: this.toX, y: this.toY})
+            .to(this.speed, {x: this.bulletToX, y: this.bulletToY})
             .start();
     },
 
     update (dt) {
-        if(this.toY < -this.node.parent.parent.height){
+        if(this.bulletToY < -this.node.parent.parent.height){
             this.node.destroy();
         }
     }
