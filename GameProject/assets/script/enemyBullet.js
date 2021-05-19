@@ -6,7 +6,7 @@ cc.Class({
         bulletToX: 0,
         bulletToY: 0,
         speed: 1,
-        _canDestroy: false,
+        _widthCanvas : 0,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -14,13 +14,15 @@ cc.Class({
     // onLoad () {},
 
     start () {
+        this._heightCanvas = cc.Canvas.instance.node.getContentSize().height;
+        
         cc.tween(this.node)
-            .by(this.speed, {x: this.bulletToX-this.node.x, y: this.bulletToY-this.node.y})
+            .by(this.speed, {x: this.bulletToX - this.node.x, y: this.bulletToY - this.node.y})
             .repeatForever().start();
     },
 
     update (dt) {
-        if(this.bulletToY < -this.node.parent.parent.height){
+        if(this.node.y < -(this._heightCanvas/2 + this.node.height)){
             this.node.destroy();
         }
     }

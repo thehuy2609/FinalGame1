@@ -25,13 +25,12 @@ cc.Class({
         this._firstPositionYWave = this.node.parent.height/2 + 50;
     },
 
-    createEnemy(xCreate, yCreate, toX, toY, prefabEnemy, wave, delayMove){
+    createEnemy(xCreate, yCreate, toX, toY, prefabEnemy, delayMove){
         let enemyWave1 = cc.instantiate(prefabEnemy);
             enemyWave1.setPosition(xCreate, yCreate);
             enemyWave1.parent = this.node;
             enemyWave1.getComponent('enemy').enemyToX = toX;
             enemyWave1.getComponent('enemy').enemyToY = toY;
-            enemyWave1.getComponent('enemy').wave = wave;
             enemyWave1.getComponent('enemy').delayMove = delayMove;
     },
 
@@ -44,7 +43,7 @@ cc.Class({
         let positionYWave1 = this._toYEnemyWave1; // vị trí Y đến
         
         for (let i = 1; i <= 12; i++) {
-            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave1, positionYWave1, prefabEnemyWave1, 1, 0);
+            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave1, positionYWave1, prefabEnemyWave1, 0);
             if(i === 6){
                 positionXWave1 = this._toXEnemyWave1 + prefabEnemyWave1.data.width;
                 positionYWave1 -= prefabEnemyWave1.data.height;
@@ -66,7 +65,7 @@ cc.Class({
         let positionYWave2 = this._toYEnemyWave2;
 
         for (let i = 1; i <= 15; i++) {
-            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave2, positionYWave2, prefabEnemyWave2, 2, 0);
+            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave2, positionYWave2, prefabEnemyWave2, 0);
             
             if(i === 5){
                 positionXWave2 = this._toXEnemyWave2 + prefabEnemyWave2.data.width*1/2;
@@ -86,24 +85,46 @@ cc.Class({
         }
     },
 
-    createWave3(){
-        let prefabEnemyWave3 = this.prefabShip;
-        this._toXEnemyWave3 = -this.prefabShip.data.width * 4.5;
-        this._toYEnemyWave3 = 200;
+    createWave3(numbersOfEnemies,cols){
 
+        if(numbersOfEnemies>30) numbersOfEnemies = 30;
+        if(cols>10) cols = 10;
+        
+        let prefabEnemyWave3 = this.prefabShip;
+        
+        this._toXEnemyWave3 = -prefabEnemyWave3.data.width* (cols/2 - 0.5)
+        this._toYEnemyWave3 = 200;
+        
         let positionXWave3 = this._toXEnemyWave3;
         let positionYWave3 = this._toYEnemyWave3;
 
-        for (let i = 1; i <= 30; i++) {
-            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave3, positionYWave3, prefabEnemyWave3, 3, 0);
+        for (let i = 1; i <= numbersOfEnemies; i++) {
+            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave3, positionYWave3, prefabEnemyWave3, 0);
             
-            if(i % 10 ==0){
-                positionXWave3 = -this.prefabShip.data.width * 4.5;
+            if(i % cols == 0){
+                positionXWave3 = this._toXEnemyWave3;
                 positionYWave3 -= prefabEnemyWave3.data.height;
             }else{
                 positionXWave3 += prefabEnemyWave3.data.width;
             }
         }
+
+        // this._toXEnemyWave3 = -this.prefabShip.data.width * 4.5; 
+        // this._toYEnemyWave3 = 200; 
+
+        // let positionXWave3 = this._toXEnemyWave3;
+        // let positionYWave3 = this._toYEnemyWave3;
+
+        // for (let i = 1; i <= 30; i++) {
+        //     this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, positionXWave3, positionYWave3, prefabEnemyWave3, 0);
+            
+        //     if(i % 10 ==0){
+        //         positionXWave3 = -this.prefabShip.data.width * 4.5;
+        //         positionYWave3 -= prefabEnemyWave3.data.height;
+        //     }else{
+        //         positionXWave3 += prefabEnemyWave3.data.width;
+        //     }
+        // }
     },
 
     update (dt) {
@@ -118,10 +139,10 @@ cc.Class({
         //     this._isCreateWave2 = true;
         // }
 
-        // if(this._isCreateWave3 === false ){
-        //     this.createWave3();
-        //     this._isCreateWave3 = true;
-        // }
+        if(this._isCreateWave3 === false ){
+            this.createWave3(15,5);
+            this._isCreateWave3 = true;
+        }
 
     },
 });

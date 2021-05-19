@@ -20,20 +20,17 @@ cc.Class({
         this._firstPositionYWave = this.node.parent.height/2 + 50;
     },
 
-    createEnemy(xCreate, yCreate, toX, toY, prefabEnemy, wave, delayMove){
-        
+    createEnemy(xCreate, yCreate, toX, toY, prefabEnemy, delayMove){
         let enemyWave1 = cc.instantiate(prefabEnemy);
             enemyWave1.setPosition(xCreate, yCreate);
             enemyWave1.parent = this.node;
-            enemyWave1.getComponent('enemy').level = 2;
-            enemyWave1.getComponent('enemy').wave = wave;
             enemyWave1.getComponent('enemy').delayMove = delayMove;
     },
 
     createWave1(){
         let prefabEnemyWave2 = this.prefabShip;
         for (let i = 0; i < 30; i++) {
-            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, 0, 0, prefabEnemyWave2, 1, i/3);
+            this.createEnemy(this._firstPositionXWave, this._firstPositionYWave, 0, 0, prefabEnemyWave2, i/3);
         }
     },
 
