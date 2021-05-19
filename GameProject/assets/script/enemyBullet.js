@@ -15,8 +15,8 @@ cc.Class({
 
     start () {
         cc.tween(this.node)
-            .to(this.speed, {x: this.bulletToX, y: this.bulletToY})
-            .start();
+            .by(this.speed, {x: this.bulletToX-this.node.x, y: this.bulletToY-this.node.y})
+            .repeatForever().start();
     },
 
     update (dt) {

@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "ufoRed",
+    "_name": "Wraith_01_Idle_000",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -40,8 +40,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 10,
-      "height": 10
+      "width": 193,
+      "height": 285
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -51,7 +51,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 159,
       "z": 0
     },
     "_scale": {
@@ -74,7 +74,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "ufoRed<Sprite>",
+    "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
@@ -88,10 +88,10 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "ef0eaa17-2c73-488b-83ff-4a6bd1d813b8"
+      "__uuid__": "0c9b3ce0-a389-4feb-9097-110b2f12c2aa"
     },
     "_type": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -105,17 +105,13 @@
     "_id": ""
   },
   {
-    "__type__": "a1f70tzvHBNQa+L0BXXbmBz",
+    "__type__": "ce9b5ZCk7tHXbPCT6UsD8JO",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
-    "bulletToX": 0,
-    "bulletToY": 0,
-    "speed": 1,
-    "_canDestroy": false,
     "_id": ""
   },
   {
@@ -124,9 +120,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "1af1e8ec-3406-4035-b56f-e2952193e94d"
+      "__uuid__": "bfd00e97-4ed7-4694-9ea4-f1ff8fbb25fa"
     },
-    "fileId": "c1P7abI4dJ57zirJNMG+4R",
+    "fileId": "8bZGwI8CZM7JwAvA122ZPd",
     "sync": false
   }
 ]

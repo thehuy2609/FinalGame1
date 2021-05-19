@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 3,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2
@@ -40,8 +40,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 98,
-      "height": 75
+      "width": 50,
+      "height": 40
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -91,7 +91,7 @@
       "__uuid__": "d541c48d-0b20-4508-9c9f-7a41f13879f6"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -119,11 +119,14 @@
     "_countdownShoot": 0,
     "_speed": 1,
     "level": 1,
+    "wave": 1,
+    "delayMove": 0,
+    "_maxWidthScene": 0,
+    "_maxHeightScene": 0,
     "_canShoot": false,
     "prefabBullet": {
       "__uuid__": "1af1e8ec-3406-4035-b56f-e2952193e94d"
     },
-    "nodeMainGame": null,
     "_id": ""
   },
   {
@@ -132,7 +135,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "9bdd875c-ad2b-4907-8aee-6900cade1f70"
     },
     "fileId": "02BAvI8FREJqzl7NVpAjCx",
     "sync": false

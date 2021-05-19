@@ -29,8 +29,8 @@ cc.Class({
         let enemyWave1 = cc.instantiate(prefabEnemy);
             enemyWave1.setPosition(xCreate, yCreate);
             enemyWave1.parent = this.node;
-            enemyWave1.getComponent('enemy').toX = toX;
-            enemyWave1.getComponent('enemy').toY = toY;
+            enemyWave1.getComponent('enemy').enemyToX = toX;
+            enemyWave1.getComponent('enemy').enemyToY = toY;
             enemyWave1.getComponent('enemy').wave = wave;
             enemyWave1.getComponent('enemy').delayMove = delayMove;
     },
@@ -118,10 +118,10 @@ cc.Class({
         //     this._isCreateWave2 = true;
         // }
 
-        if(this._isCreateWave3 === false ){
-            this.createWave3();
-            this._isCreateWave3 = true;
-        }
+        // if(this._isCreateWave3 === false ){
+        //     this.createWave3();
+        //     this._isCreateWave3 = true;
+        // }
 
     },
 });
