@@ -15,8 +15,8 @@ cc.Class({
 
     },
 
-    moving(){
-
+    movingFirst(){
+        
     },
 
     shoot(bulletToX, bulletToY){

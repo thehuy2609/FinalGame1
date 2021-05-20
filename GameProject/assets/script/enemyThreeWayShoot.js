@@ -13,10 +13,24 @@ cc.Class({
         //this.shoot();
     },
 
-    moving(){
+    movingFirst(){
         cc.tween(this.node)
             .to(1, {x: this.moveToX, y: this.moveToY})
             .start();
+    },
+
+    movingLeftRight(){
+        let actionMove = cc.tween()
+            .to(0.5, {x: this.node.x - 50})
+            .to(0.5, {x: this.node.x + 50})
+        cc.tween(this.node).then(actionMove).repeatForever().start();
+    },
+
+    movingRightLeft(){
+        let actionMove = cc.tween()
+            .to(0.5, {x: this.node.x + 50})
+            .to(0.5, {x: this.node.x - 50})
+        cc.tween(this.node).then(actionMove).repeatForever().start();
     },
 
     shoot(){
@@ -28,24 +42,18 @@ cc.Class({
         redBullet1.setPosition(bulletPos.x, bulletPos.y);
         redBullet1.getComponent('enemyBullet').bulletNumber = 1;
         redBullet1.getComponent('enemyBullet').threeWay = true;
-        // redBullet1.getComponent('enemyBullet').bulletToX = redBullet1.x;
-        // redBullet1.getComponent('enemyBullet').bulletToY = -this.node.parent.height;
-
 
         let redBullet2 = cc.instantiate(this.prefabBullet)
         redBullet2.parent = cc.Canvas.instance.node
         redBullet2.setPosition(bulletPos.x, bulletPos.y);
         redBullet2.getComponent('enemyBullet').bulletNumber = 2;
         redBullet2.getComponent('enemyBullet').threeWay = true;
-        // redBullet2.getComponent('enemyBullet').bulletToX = redBullet2.x;
-        // redBullet2.getComponent('enemyBullet').bulletToY = -this.node.parent.height;
 
         let redBullet3 = cc.instantiate(this.prefabBullet)
         redBullet3.parent = cc.Canvas.instance.node
         redBullet3.setPosition(bulletPos.x, bulletPos.y);
         redBullet3.getComponent('enemyBullet').bulletNumber = 3;
         redBullet3.getComponent('enemyBullet').threeWay = true;
-        // redBullet3.angle = -35
     },
 
     update (dt) {

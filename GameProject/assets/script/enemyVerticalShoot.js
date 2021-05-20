@@ -13,10 +13,24 @@ cc.Class({
         //this.shoot();
     },
 
-    moving(){
+    movingFirst(){
         cc.tween(this.node)
             .to(1, {x: this.moveToX, y: this.moveToY})
             .start();
+    },
+
+    movingLeftRight(){
+        let actionMove = cc.tween()
+            .to(0.5, {x: this.node.x - 50})
+            .to(0.5, {x: this.node.x + 50})
+        cc.tween(this.node).then(actionMove).repeatForever().start();
+    },
+
+    movingRightLeft(){
+        let actionMove = cc.tween()
+            .to(0.5, {x: this.node.x + 50})
+            .to(0.5, {x: this.node.x - 50})
+        cc.tween(this.node).then(actionMove).repeatForever().start();
     },
 
     shoot(){

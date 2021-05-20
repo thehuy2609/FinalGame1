@@ -12,6 +12,8 @@ cc.Class({
             default: 0,
             serializable: false,
         },
+
+        totalTime:0,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -54,12 +56,14 @@ cc.Class({
     updateTime(timeNow){
         let result = (timeNow - this._timeStart) *1000;
         result = result.toLocaleString('it-IT');
+        this.totalTime = result;
+        // cc.log(this.totalTime);
         this.node.getComponent(cc.Label).string = this.timeConvert(result);
     },
 
     timeConvert(num)
     { 
-        let minutes = Math.round(num / 60);
+        let minutes = Math.floor(num / 60);
         if(minutes < 10) minutes = "0" + minutes
         let seconds = num % 60;
         if(seconds < 10) seconds = "0" + seconds
