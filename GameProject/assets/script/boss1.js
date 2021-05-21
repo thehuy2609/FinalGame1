@@ -6,6 +6,8 @@ cc.Class({
         health: 0,
         prefabBoss : cc.Prefab,
         _timerDeath:0,
+        _timerHit: 0,
+        prefabBullet: cc.Prefab,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -29,7 +31,34 @@ cc.Class({
             cc.tween(this.node).then(moving).repeatForever().start();
     },
 
+    actionHit(){
+        this.node.getComponent(cc.Animation).play("bossHit");
+    },
+
+    hit(){
+        let positionXBullet = this.node.x - 80;
+        let positionYBullet = this.node.y - 80;
+        
+        for (let i = 1; i <= 4; i++) {
+            let bulletBoss = cc.instantiate(this.prefabBullet);
+            
+            bulletBoss.setPosition(positionXBullet, positionYBullet);
+            bulletBoss.parent = this.node.parent;
+            
+            if(i === 1){
+                positionYBullet -=80;
+            }
+            if(i === 3){
+                positionYBullet +=80;
+            }
+            positionXBullet +=80;
+
+            bulletBoss.getComponent('bulletBoss').bulletNumber = i;
+        }
+    },
+
     deathBoss(){
+        this.node.stopAllActions();
         this.node.destroy();
         this.createClone();
     },
@@ -50,10 +79,16 @@ cc.Class({
 
     update (dt){
         this._timerDeath+=dt;
+        this._timerHit+=dt;
         if(this._timerDeath>=5 && this.health === 0){
             cc.log('asd');
             this.deathBoss();
             this.health = 10;
+        }
+
+        if(this._timerHit > 1.5){
+            this.actionHit();
+            this._timerHit =0;
         }
     },
 });

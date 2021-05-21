@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Wraith_01_Idle_000",
+    "_name": "pill_green",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -25,13 +25,10 @@
       },
       {
         "__id__": 3
-      },
-      {
-        "__id__": 4
       }
     ],
     "_prefab": {
-      "__id__": 5
+      "__id__": 4
     },
     "_opacity": 255,
     "_color": {
@@ -43,8 +40,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 193,
-      "height": 285
+      "width": 22,
+      "height": 21
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -53,8 +50,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 159,
+      "x": -215,
+      "y": -5,
       "z": 0
     },
     "_scale": {
@@ -91,7 +88,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "0c9b3ce0-a389-4feb-9097-110b2f12c2aa"
+      "__uuid__": "a1bf9503-4b03-4501-a561-f9e8ece36bd2"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -108,38 +105,13 @@
     "_id": ""
   },
   {
-    "__type__": "ce9b5ZCk7tHXbPCT6UsD8JO",
+    "__type__": "19a5aQP5F1DcqHZ4U2SkewH",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
-    "movingRight": true,
-    "settingWidth": 0,
-    "settingHeight": 0,
-    "prefabBullet": {
-      "__uuid__": "cf859c9c-fa79-4c51-aa00-efc1dd7ba9f7"
-    },
-    "_id": ""
-  },
-  {
-    "__type__": "cc.Animation",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "_defaultClip": {
-      "__uuid__": "313a09d6-ac83-412c-b0c7-9bb9f85e56a6"
-    },
-    "_clips": [
-      {
-        "__uuid__": "313a09d6-ac83-412c-b0c7-9bb9f85e56a6"
-      }
-    ],
-    "playOnLoad": false,
     "_id": ""
   },
   {
@@ -148,9 +120,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "bfd00e97-4ed7-4694-9ea4-f1ff8fbb25fa"
+      "__id__": 0
     },
-    "fileId": "8bZGwI8CZM7JwAvA122ZPd",
+    "fileId": "79SCNEp/9KFYKZwq4A+tVA",
     "sync": false
   }
 ]
