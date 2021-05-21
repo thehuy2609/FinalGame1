@@ -19,7 +19,7 @@ cc.Class({
     onLoad () {
         this._content = this.scrollViewRanking.node.getChildByName("view").getChildByName("content");
         EventEmitter.instance.registerEvent("endGame", this.getTime.bind(this));
-        let rank = cc.sys.localStorage.getItem('BXH1');
+        let rank = cc.sys.localStorage.getItem('ranked');
         if(rank !== null){
             this.arrRanking = JSON.parse(rank);
         }else{
@@ -44,12 +44,11 @@ cc.Class({
             time: 0,
         }
         newRank.name = this.editBoxName.string;
-        newRank.time = this._time;
+        newRank.time = Number(this._time);
         this.arrRanking.push(newRank);
         this.sortArrRanking(this.arrRanking);
-        cc.sys.localStorage.setItem('BXH1', JSON.stringify(this.arrRanking));
-        cc.log(this.arrRanking);
-        cc.log(arrayAfterSort);
+        cc.sys.localStorage.setItem('ranked', JSON.stringify(this.arrRanking));
+        
         this.showRanking(this.arrRanking);
         this.scrollViewRanking.node.active = true;
         //this.btnEnterName.node.active = false;
@@ -71,10 +70,13 @@ cc.Class({
     },
     
     sortArrRanking(arr) {
-        for (let i = 0; i < arr.length; i++) {
+        for (let i = 0; i < arr.length-1; i++) {
             for (let j = i + 1; j < arr.length; j++) {
-                if (arr[i].time < arr[j].time) {
-                    [arr[i], arr[j]] = [arr[j], arr[i]];
+                if (arr[i].time > arr[j].time) {
+                    // [arr[i], arr[j]] = [arr[j], arr[i]];
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
             }
         }
