@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>exp3_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{495,493}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{495,493}}</string>
+				<key>sourceSize</key>
+				<string>{495,493}</string>
+			</dict>
+
+			<key>exp3_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,494},{495,472}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{495,472}}</string>
+				<key>sourceSize</key>
+				<string>{495,472}</string>
+			</dict>
+
+			<key>exp3_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,967},{495,494}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{495,494}}</string>
+				<key>sourceSize</key>
+				<string>{495,494}</string>
+			</dict>
+
+			<key>exp3_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{496,1444},{488,513}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{488,513}}</string>
+				<key>sourceSize</key>
+				<string>{488,513}</string>
+			</dict>
+
+			<key>exp3_5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1462},{495,479}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{495,479}}</string>
+				<key>sourceSize</key>
+				<string>{495,479}</string>
+			</dict>
+
+			<key>exp3_6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{496,930},{492,513}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{492,513}}</string>
+				<key>sourceSize</key>
+				<string>{492,513}</string>
+			</dict>
+
+			<key>exp3_7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{985,1444},{462,513}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{462,513}}</string>
+				<key>sourceSize</key>
+				<string>{462,513}</string>
+			</dict>
+
+			<key>exp3_8.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{496,0},{495,421}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{495,421}}</string>
+				<key>sourceSize</key>
+				<string>{495,421}</string>
+			</dict>
+
+			<key>exp3_9.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{496,422},{493,507}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{493,507}}</string>
+				<key>sourceSize</key>
+				<string>{493,507}</string>
+			</dict>
+
+		</dict>
+
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>size</key>
+			<string>{2048,2048}</string>
+			<key>textureFileName</key>
+			<string>explosion3.png</string>
+			</dict>
+		</dict>
+</plist>
